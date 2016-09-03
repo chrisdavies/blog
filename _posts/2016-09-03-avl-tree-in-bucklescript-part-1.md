@@ -45,7 +45,7 @@ A binary search tree is composed of a bunch of nodes, where a node has a value, 
 - 0 if the node's left and right branches are the same depth
 - 1 if the node's left branch is shallower than its right
 
-'''ocaml
+```ocaml
 
 (** avl_node represents a single node in an AVL tree. *)
 type 'a avl_node =
@@ -55,7 +55,7 @@ type 'a avl_node =
     balance : int; (** -1 is left-heavy, 0 is balanced, 1 is right-heavy *)
   }
 
-'''
+```
 
 Let's break down that code.
 
