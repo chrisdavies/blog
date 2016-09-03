@@ -157,19 +157,16 @@ The last thing we need to do is remove a node from the tree.
 ```
 let rec remove_node root v =
   match root with
-    | None   -> root
-    | Some n ->
-      (match n with
-      | _ when v > n.value  -> Some { n with right = remove_node n.right v }
-      | _ when v < n.value  -> Some { n with left = remove_node n.left v }
-      | {left = Some l; right = Some r} ->
-            Some { n with value = r.value; right = remove_node n.right r.value; }
-      | {right = Some r}    -> Some r
-      | {left}              -> left
-      )
+    | None                      -> root
+    | Some n when v > n.value   -> Some { n with right = remove_node n.right v }
+    | Some n when v < n.value   -> Some { n with left = remove_node n.left v }
+    | Some ({left = Some l; right = Some r} as n) ->
+        Some { n with value = r.value; right = remove_node n.right r.value; }
+    | Some {right = Some r}     -> Some r
+    | Some {left}               -> left
 ```
 
-That's pretty complicated. I'm not sure how to simplify it better. Let's test it.
+That's pretty complicated. Let's test it out in utop.
 
     utop
     #use "avl.ml";;
