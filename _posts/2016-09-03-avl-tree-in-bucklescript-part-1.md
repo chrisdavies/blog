@@ -45,6 +45,8 @@ A binary search tree is composed of a bunch of nodes, where a node has a value, 
 - 0 if the node's left and right branches are the same depth
 - 1 if the node's left branch is shallower than its right
 
+Let's create a source file `src/avl.ml`:
+
 ```ocaml
 
 (** avl_node represents a single node in an AVL tree. *)
@@ -78,11 +80,11 @@ Before we write an AVL tree, let's get a binary search tree working.
 Let's define a function `insert_node` which inserts a node into a tree.
 
 ```ocaml
-let rec insert_node root v =
+let rec insert_node v root =
   let result = match root with
     | None                    -> {value=v; left=None; right=None; balance=0}
-    | Some n when v > n.value -> { n with right = insert_node n.right v }
-    | Some n when v < n.value -> { n with left = insert_node n.left v }
+    | Some n when v > n.value -> { n with right = insert_node v n.right }
+    | Some n when v < n.value -> { n with left = insert_node v n.left }
     | Some n                  -> n
   in Some result
 ```
@@ -128,10 +130,10 @@ Note: in utop, each statement has to end with `;;`.
 Now, we'll define a function `find_node`.
 
 ```ocaml
-let rec find_node root v =
+let rec find_node v root =
   match root with
-    | Some n when v > n.value -> find_node n.right v
-    | Some n when v < n.value -> find_node n.left v
+    | Some n when v > n.value -> find_node v n.right
+    | Some n when v < n.value -> find_node v n.left
     | _ -> root
 ```
 
@@ -155,13 +157,13 @@ Note: in utop, it's legal to re-bind a value, but this is not legal in normal OC
 The last thing we need to do is remove a node from the tree.
 
 ```
-let rec remove_node root v =
+let rec remove_node v root =
   match root with
     | None                      -> root
-    | Some n when v > n.value   -> Some { n with right = remove_node n.right v }
-    | Some n when v < n.value   -> Some { n with left = remove_node n.left v }
+    | Some n when v > n.value   -> Some { n with right = remove_node v n.right }
+    | Some n when v < n.value   -> Some { n with left = remove_node v n.left }
     | Some ({left = Some l; right = Some r} as n) ->
-        Some { n with value = r.value; right = remove_node n.right r.value; }
+        Some { n with value = r.value; right = remove_node r.value n.right; }
     | Some {right = Some r}     -> Some r
     | Some {left}               -> left
 ```
@@ -198,5 +200,4 @@ Note that insert, find, and remove all have to crawl the tree in order to perfor
 
 That's it for a basic binary search tree in Bucklescript. Up next:
 
-- Unit test this sucka
-- Make it a true AVL
+[Part 2: Unit testing with mocha]({{ site.baseurl }}{% post_url 2016-09-03-avl-tree-in-bucklescript-part-2 %})
