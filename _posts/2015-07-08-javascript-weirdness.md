@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "JavaScript Weirdness"
-date:   2016-07-08 11:20:00 -0000
+date:   2015-07-08 11:20:00 -0000
 categories: javascript
 ---
 

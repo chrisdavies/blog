@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Simplify Your Life With Useless Tech"
-date:   2016-10-08 11:20:00 -0000
+date:   2015-10-08 11:20:00 -0000
 categories: iot technology simplicity
 ---
 
