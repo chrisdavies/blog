@@ -198,6 +198,8 @@ Note that insert, find, and remove all have to crawl the tree in order to perfor
 
 ## Conclusion
 
-That's it for a basic binary search tree in Bucklescript. Up next:
+That's it for a basic binary search tree in Bucklescript.
+
+Up next:
 
 [Part 2: Unit testing with mocha]({{ site.baseurl }}{% post_url 2016-09-03-avl-tree-in-bucklescript-part-2 %})

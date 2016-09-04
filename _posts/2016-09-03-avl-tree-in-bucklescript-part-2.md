@@ -111,6 +111,8 @@ So you can see that we could then call this JavaScript function like so `assert_
 
 OCaml does this for us automatically. It's a powerful combination of [currying](https://en.wikipedia.org/wiki/Currying) and [partial application](https://en.wikipedia.org/wiki/Partial_application).
 
+One last thing to note is that all of our AVL functions take their arguments in this order: `insert_node v root`. Value first, then the node that is being operated on. This is handy because it allows us to define useful partially-applied versions of our AVL functions. When thinking about the order of your function arguments, spend a wee bit of time thinking about how they might be partially applied and order accordingly.
+
 ## The pipe operator
 
 Now we're ready to talk about the funny `|>` operator in our test code. This looks odd to most non-ML programmers. It's called the pipe operator. And it is superfly.
