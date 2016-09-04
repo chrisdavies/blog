@@ -5,7 +5,9 @@ date:   2016-09-03 08:26:37 -0400
 categories: bucklescript javascript
 ---
 
-Interested in Bucklescript? You should be. Here's how I got up and running on my Mac.
+Interested in [Bucklescript](https://github.com/bloomberg/bucklescript)? You should be. It's OCaml that compiles to JavaScript. But unlike most compile-to-JS langauges, it's really, really good. Fast. Produces small, legible JavaScript. And it's got some of the best type inference in the business.
+
+Here's how I got up and running on my Mac.
 
 ## Install OCaml and friends
 
