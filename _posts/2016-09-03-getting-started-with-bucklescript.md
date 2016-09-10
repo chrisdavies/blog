@@ -15,9 +15,13 @@ First, [install OCaml](https://ocaml.org/docs/install.html). On Mac, this is don
 
     brew install ocaml
     brew install opam
-    opam install utop
+    opam install merlin utop ocp-indent
 
-Opam is the package manager (e.g. like NPM, gems, nuget) for OCaml. Utop is a really, really nice REPL.
+Opam is the package manager (e.g. like NPM, gems, nuget) for OCaml.
+
+- utop: a really, really nice REPL.
+- merlin: a sweet tool for adding IDE-like features to VSCode, vim, etc
+- ocp-indent: a tool for helping auto-indent your .ml files
 
 ## Setup VS Code:
 

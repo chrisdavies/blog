@@ -254,4 +254,4 @@ While writing this up, I did find myself baffled by vague and unhelpful compiler
 
 Anyway, hopefully the Bucklescript/OCaml folks will get all Elm on us and give us friendlier compiler errors in the future.
 
-Up next... An actual AVL tree!
+[Up next... An actual AVL tree!]({{ site.baseurl }}{% post_url 2016-09-05-avl-tree-in-bucklescript-part-3 %})
