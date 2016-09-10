@@ -5,7 +5,7 @@ date:   2016-09-09 9:50:00 -0000
 categories: bucklescript javascript avl-tree binary-tree
 ---
 
-We've [built a binary search tree in OCaml]({{ site.baseurl }}{% post_url 2016-09-03-avl-tree-in-bucklescript-part-1 %}), and we've [tested it](({{ site.baseurl }}{% post_url 2016-09-03-avl-tree-in-bucklescript-part-2 %})), *and* we've [kept track of node balances](({{ site.baseurl }}{% post_url 2016-09-05-avl-tree-in-bucklescript-part-3 %})). It's time to put it all together.
+We've [built a binary search tree in OCaml]({{ site.baseurl }}{% post_url 2016-09-03-avl-tree-in-bucklescript-part-1 %}), and we've [tested it](({{ site.baseurl }}{% post_url 2016-09-03-avl-tree-in-bucklescript-part-2 %})), *and* we've [kept track of node balances]({{ site.baseurl }}{% post_url 2016-09-05-avl-tree-in-bucklescript-part-3 %}). It's time to put it all together.
 
 ## Rotating things
 
