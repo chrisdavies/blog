@@ -38,6 +38,7 @@ $on-laptop:        800px;
 // Import partials from the `minima` theme.
 @import "minima";
 
+.site-title img,
 .site-logo {
   max-height: 1.4em;
   max-width: 1.4em;
@@ -45,3 +46,4 @@ $on-laptop:        800px;
   vertical-align: middle;
   display: inline-block;
 }
+
